@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Contract - Create Profile</title>
+   
+    <link rel='stylesheet' href="project.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+
+<body>
+    <div class="container">
+   <!-- Create/Update User Profile Form -->
+<h1>Create/Update User Profile</h1>
+<form id="profileForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required><br>
+    <label for="skills">Skills:</label>
+    <input type="text" id="skills" required><br>
+    <button type="button" id="createUpdateProfile" onclick="App.createProfile()">Create/Update Profile</button>
+</form>
+<div id="result"></div>
+
+<!-- Get User Profile Form -->
+<!-- <h2>Get User Profile</h2>
+<form id="getUserProfileForm">
+    <label for="getUserAddress">User Address:</label>
+    <input type="text" id="getUserAddress" required><br>
+    <button type="button" id="getUserProfile" onclick="App.getUserProfile()">Get User Profile</button>
+</form>
+<div id="userProfileResult"></div> -->
+
+<!-- Update User Profile Form -->
+<!-- <h3>Update User Profile</h3>
+<form id="profileUpdateForm">
+    <label for="newUsername">New Username:</label>
+    <input type="text" id="newUsername" required><br>
+    <label for="newSkills">New Skills:</label>
+    <input type="text" id="newSkills" required><br>
+    <button type="button" id="updateProfile" onclick="App.updateProfile()">Update Profile</button>
+</form> -->
+<div id="updateResult"></div>
+
+<div id="updateResult"></div>
+<h2>Create Project Bid</h2>
+<form id="createProjectBidForm">
+    <input type="number" id="projectid" required><br>
+    <button type="button" onclick="App.createProjectBid()">Create Project Bid</button>
+</form>
+
+<h2>Place Bid</h2>
+<form id="placeBidForm">
+    <label>Project Number: <input type="text" id="projectNumber"></label>
+    <label>Bid Amount (in wei): <input type="text" id="bidAmount"></label>
+    <button type="button" onclick="App.placeBid()">Place Bid</button>
+</form>
+
+<h2>Accept Bid</h2>
+    <form id="acceptBidForm">
+        <label>Project Number: <input type="text" id="acceptProjectNumber"></label>
+        <label>Bidder Address: <input type="text" id="bidderAddress"></label>
+        <button type="button" onclick="App.acceptBid()">Accept Bid</button>
+    </form>
+
+    <h2>Update Ratings</h2>
+    <form id="updateRatingsForm">
+        <label>Freelancer Address: <input type="text" id="freelancerAddress"></label>
+        <label>Rating (1-5): <input type="text" id="rating"></label>
+        <button type="button" onclick="App.updateRatings()">Update Ratings</button>
+    </form>
+
+    <!-- Get Best Bids Form -->
+<h2>Get Best Bids</h2>
+<form id="getBestBidsForm">
+    <label for="projectNumberForBestBids">Project Number:</label>
+    <input type="number" id="projectNumberForBestBids" required><br>
+    <label for="numberOfBestBids">Number of Best Bids:</label>
+    <input type="number" id="numberOfBestBids" required><br>
+    <button type="button" onclick="App.getBestBids()">Get Best Bids</button>
+</form>
+<div id="bestBidsResult"></div>
+
+</div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <script src="/create_profile.js"></script>
+
+</body>
+</html>
+
+    
+    
+

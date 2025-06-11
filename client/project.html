@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Project</title>
+    <link rel="stylesheet" type="text/css" href="project.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+<body>
+    <div class="container">
+     
+            <h2>Create Project</h2>
+            <p>Inputs:</p>
+            <p>Title: <input type="text" id="createProjectTitle" placeholder="Project Title"></p>
+            <p>Budget: <input type="number" id="createProjectBudget" placeholder="Budget"></p>
+            <p>Deadline: <input type="number" id="createProjectDeadline" placeholder="Deadline"></p>
+            <button onclick="App.createProject()">Create Project</button>
+        
+            <hr>
+        
+            <h2>Add Freelancer to Project</h2>
+            <p>Inputs:</p>
+            <p>Milestone ID: <input type="number" id="addFreelancerMilestoneId" placeholder="Milestone ID"></p>
+            <p>Freelancer Address: <input type="text" id="addFreelancerAddress" placeholder="Freelancer Address"></p>
+            <button onclick="App.addFreelancerToProject()">Add Freelancer to Project</button>
+        
+            <hr>
+        
+            <h2>Create Milestone</h2>
+            <p>Inputs:</p>
+            <p>Project ID: <input type="number" id="createMilestoneProjectId" placeholder="Project ID"></p>
+            <p>Description: <input type="text" id="createMilestoneDescription" placeholder="Description"></p>
+            <p>Deadline: <input type="number" id="createMilestoneDeadline" placeholder="Deadline"></p>
+            <p>Amount: <input type="number" id="createMilestoneAmount" placeholder="Amount"></p>
+            <button onclick="App.createMilestone()">Create Milestone</button>
+        
+            <hr>
+        
+            <h2>Submit Milestone</h2>
+            <p>Inputs:</p>
+            <p>Milestone ID: <input type="number" id="submitMilestoneId" placeholder="Milestone ID"></p>
+            <p>Work Proof: <input type="text" id="submitMilestoneWorkProof" placeholder="Work Proof URL"></p>
+            <p>Comments: <input type="text" id="submitMilestoneComments" placeholder="Comments"></p>
+            <button onclick="App.submitMilestone()">Submit Milestone</button>
+        
+            <hr>
+        
+            <h2>Approve Milestone</h2>
+            <p>Inputs:</p>
+            <p>Milestone ID: <input type="number" id="approveMilestoneId" placeholder="Milestone ID"></p>
+            <button onclick="App.approveMilestone()">Approve Milestone</button>
+        
+            <hr>
+        
+            <h2>Reject Milestone</h2>
+            <p>Inputs:</p>
+            <p>Milestone ID: <input type="number" id="rejectMilestoneId" placeholder="Milestone ID"></p>
+            <p>Reason: <input type="text" id="rejectMilestoneReason" placeholder="Rejection Reason"></p>
+            <button onclick="App.rejectMilestone()">Reject Milestone</button>
+        
+            <hr>
+        
+            <h2>Initiate Dispute</h2>
+            <p>Inputs:</p>
+            <p>Milestone ID: <input type="number" id="initiateDisputeMilestoneId" placeholder="Milestone ID"></p>
+            <p>Evidence: <input type="text" id="initiateDisputeEvidence" placeholder="Evidence URL"></p>
+            <button onclick="App.initiateDispute()">Initiate Dispute</button>
+        
+            <hr>
+        
+            <h2>Resolve Dispute</h2>
+            <p>Inputs:</p>
+            <p>Dispute ID: <input type="number" id="resolveDisputeId" placeholder="Dispute ID"></p>
+            <p>Decision (true or false): <input type="text" id="resolveDisputeDecision" placeholder="Decision"></p>
+            <button onclick="App.resolveDispute()">Resolve Dispute</button>
+        
+            <hr>
+        
+            <h2>Auto Approve Milestone</h2>
+            <p>Inputs:</p>
+            <p>Milestone ID: <input type="number" id="autoApproveMilestoneId" placeholder="Milestone ID"></p>
+            <button onclick="App.autoApproveMilestone()">Auto Approve Milestone</button>
+        
+            <hr>
+        
+            <h2>Initiate Arbitration</h2>
+            <p>Inputs:</p>
+            <p>Project ID: <input type="number" id="initiateArbitrationProjectId" placeholder="Project ID"></p>
+            <p>Freelancer Address: <input type="text" id="initiateArbitrationFreelancerAddress" placeholder="Freelancer Address"></p>
+            <p>Description: <input type="text" id="initiateArbitrationDescription" placeholder="Arbitration Description"></p>
+            <button onclick="App.initiateArbitration()">Initiate Arbitration</button>
+        
+            <hr>
+        
+            <h2>Resolve Arbitration</h2>
+            <p>Inputs:</p>
+            <p>Project ID: <input type="number" id="resolveArbitrationProjectId" placeholder="Project ID"></p>
+            <p>Accepted (true or false): <input type="text" id="resolveArbitrationAccepted" placeholder="Accepted"></p>
+            <button onclick="App.resolveArbitration()">Resolve Arbitration</button>
+        
+            <hr>
+        
+            <h2>Auto Transfer Funds</h2>
+            <p>Inputs:</p>
+            <p>Project ID: <input type="number" id="autoTransferFundsProjectId" placeholder="Project ID"></p>
+            <button onclick="App.autoTransferFunds()">Auto Transfer Funds</button>
+        
+           
+        
+    </div>
+    <div id="result"></div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <script src="/project.js"></script>
+</body>
+</html>
